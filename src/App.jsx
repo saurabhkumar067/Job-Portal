@@ -8,6 +8,7 @@ import AutomationOperative from "./components/jobsDisc/AutomationOperative";
 import DeploymentOperative from "./components/jobsDisc/DeploymentOperative";
 import LegalComplianceProfessional from "./components/jobsDisc/LegalComplianceProfessional";
 import ResearchDevelopmentSpecialist from "./components/jobsDisc/ResearchDevelopmentSpecialist";
+import JobForm from "./components/formSection/JobForm";
 
 function App() {
   const router = createBrowserRouter([
@@ -42,6 +43,10 @@ function App() {
         {
           path: "/research_development_specialist",
           element: <ResearchDevelopmentSpecialist />,
+        },
+        {
+          path: `/job-form`,
+          element: <JobForm />,
         },
       ],
     },

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function BackendDeveloperIntern({
   title,
@@ -47,7 +48,6 @@ function BackendDeveloperIntern({
               </li>
             );
           })}
-          
         </ul>
         <h3 className="font-semibold text-lg">Perks:</h3>
         <ul className="my-4 list-disc px-16 text-gray-700 xs:px-8 md:pl-16">
@@ -62,9 +62,11 @@ function BackendDeveloperIntern({
           })}
         </ul>
         <div className="w-full m-auto flex justify-center items-center">
-          <button className="bg-[#93C47D] py-2 px-6 text-2xl font-bold  my-5 mt-4 hover:bg-[#b3e29d] duration-500">
-            Apply
-          </button>
+          <NavLink to="/job-form">
+            <button className="bg-[#93C47D] py-2 px-6 text-2xl font-bold  my-5 mt-4 hover:bg-[#b3e29d] duration-500">
+              Apply
+            </button>
+          </NavLink>
         </div>
       </div>
     </section>

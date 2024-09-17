@@ -13,6 +13,7 @@ function SearchAllAccess() {
     <div className='px-28 flex justify-between w-full gap-4 overflow-hidden xs:px-2 xs:block md:flex lg:px-28'>
         <Search searchInput={searchInput} setSearchInput={setSearchInput} onFilter={handleFilter}/>
         <Post  searchInput={searchInput} selectedContract={selectedContract}/>
+        
     </div>
   )
 }
