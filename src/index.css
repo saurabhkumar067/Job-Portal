@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    position: relative;
+    /* background-image: url(./assets/Circle.svg); */
+
+}
+.backdrop-blur-index {
+    backdrop-filter: blur(5px);
+  }

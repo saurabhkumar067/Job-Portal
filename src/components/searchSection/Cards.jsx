@@ -16,14 +16,14 @@ function Cards({
   NavLinkName,
 }) {
   return (
-    <div className="flex py-6 px-5 rounded-xl justify-between  border-[1px] xs:block md:flex cursor-pointer hover:bg-slate-100 duration-500">
+    <div className="flex py-6 px-5 rounded-xl justify-between  border-[1px] xs:block md:flex cursor-pointer hover:bg-gray-100 duration-500 backdrop-blur-index">
       <NavLink
         to={`${NavLinkName}`}
         className="h-[20vh] flex items-center gap-4 "
       >
-        <div className="">
+        {/* <div className="">
           <img src={img} className="w-32 xs:w-28 lg:w-32" alt="laptop image" />
-        </div>
+        </div> */}
         <div>
           <h2 className="text-[1.4rem] font-semibold xs:text-lg lg:text-[1.4rem]">
             {postName}
@@ -55,7 +55,7 @@ function Cards({
           {Contract}
         </p>
         <p
-          className="flex items-center gap-1 text-[#94748B] font-medium"
+          className="flex items-center gap-1 text-[#94748B] font-medium xs:mt-4 lg:mt-0 md:mt-0"
         >
           <span>
             <MdOutlineAccessTime />

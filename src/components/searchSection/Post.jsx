@@ -10,10 +10,10 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
       id: 1,
       img: LaptopImg,
       postName: "Backend Developer Intern",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote/Flexible",
       salary: "Not mentioned",
-      jobPostTime: "Today",
+      jobPostTime: "2024-09-18",
       Contract: "Internship",
       NavLinkName: "/backend_developer-intern",
     },
@@ -21,55 +21,55 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
       id: 2,
       img: LaptopImg,
       postName: "Animator Intern",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote",
       salary: "Not mentioned",
-      jobPostTime: "1 day ago",
-      Contract: "Contract",
+      jobPostTime: "2024-09-17",
+       Contract: "Internship",
       NavLinkName: "/animator-intern",
     },
     {
       id: 3,
       img: LaptopImg,
       postName: "Automation Operative",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote",
       salary: "Not mentioned",
-      jobPostTime: "2 days ago",
-      Contract: "Temporary",
+      jobPostTime: "2024-09-15",
+       Contract: "Internship",
       NavLinkName: "/automation_operative",
     },
     {
       id: 4,
       img: LaptopImg,
       postName: "Deployment Operative",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote",
       salary: "Not mentioned",
-      jobPostTime: "1 month ago",
-      Contract: "Internship",
+      jobPostTime: "2024-09-15",
+       Contract: "Internship",
       NavLinkName: "/deployment_operative",
     },
     {
       id: 5,
       img: LaptopImg,
       postName: "Legal & Compliance Professional",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote",
       salary: "Not mentioned",
-      jobPostTime: "1 month ago",
-      Contract: "Full-time",
+      jobPostTime: "2024-09-15",
+       Contract: "Internship",
       NavLinkName: "/legal_compliance-professional",
     },
     {
       id: 6,
       img: LaptopImg,
       postName: "Research & Development Specialist",
-      typesLocation: "Hybrid",
+      typesLocation: "PayME",
       workLocation: "Remote",
       salary: "Not mentioned",
-      jobPostTime: "1 month ago",
-      Contract: "Internship",
+      jobPostTime: "2024-09-15",
+       Contract: "Internship",
       NavLinkName: "/research_development_specialist",
     },
   ];
@@ -103,17 +103,36 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+
+  // Real date 
+  function getTimeDifference(jobPostTime) {
+    const postDate = new Date(jobPostTime);
+    const today = new Date();
+    
+    const timeDiff = today - postDate;
+    const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+  
+    if (daysDiff === 0) return "Today";
+    if (daysDiff === 1) return "1 day ago";
+    if (daysDiff < 30) return `${daysDiff} days ago`;
+    const monthsDiff = Math.floor(daysDiff / 30);
+    return `${monthsDiff} month${monthsDiff > 1 ? 's' : ''} ago`;
+  }
+  
 
   return (
     <section className="w-[75%] xs:w-full xs:mt-5 md:mt-0 md:w-[65%] lg:w-[75%]">
-      <div className="cards flex flex-col gap-3">
+      <div className="cards flex flex-col gap-3 h-[1000px] xs:h-[unset] lg:h-[1000px]">
         {currentJobs.length > 0 ? (
           currentJobs.map((item) => {
             const {
@@ -127,6 +146,7 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
               Contract,
               NavLinkName,
             } = item;
+            const displayTime = getTimeDifference(jobPostTime);
             return (
               <Cards
                 key={id}
@@ -135,7 +155,7 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
                 typesLocation={typesLocation}
                 workLocation={workLocation}
                 salary={salary}
-                jobPostTime={jobPostTime}
+                jobPostTime={displayTime}
                 Contract={Contract}
                 id={id}
                 NavLinkName={NavLinkName}
@@ -145,9 +165,8 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
         ) : (
           <p>No jobs found</p>
         )}
-      </div>
 
-      {/* Pagination Controls */}
+        {/* Pagination Controls */}
       {filteredVacancies.length > jobsPerPage && (
         <div className="flex justify-between mt-4">
           <button
@@ -169,6 +188,9 @@ function Post({ searchInput, selectedContract, showRemoteJobs }) {
           </button>
         </div>
       )}
+      </div>
+
+      
     </section>
   );
 }

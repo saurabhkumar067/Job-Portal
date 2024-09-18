@@ -23,8 +23,8 @@ function Search({ onFilter }) {
   };
 
   return (
-    <section className="w-[25%] xs:w-full md:w-[35%]">
-      <div className="border-[1px] p-3 rounded-xl">
+    <section className="w-[25%] xs:w-full md:w-[35%] ">
+      <div className="border-[1px] p-3 rounded-xl bg-[#ffffffa8] backdrop-blur-index">
         <div>
           <label htmlFor="title" className="font-semibold">
             Search
@@ -59,7 +59,7 @@ function Search({ onFilter }) {
             <option value="Volunteer">Volunteer</option>
           </select>
         </div>
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <label htmlFor="locations" className="font-semibold">
             {" "}
             Location
@@ -91,7 +91,7 @@ function Search({ onFilter }) {
             <option value="thimphu">Thimphu, Bhutan</option>
             <option value="male">Male, Maldives</option>
           </select>
-        </div>
+        </div> */}
         <div className="my-3">
           <input
             type="checkbox"
