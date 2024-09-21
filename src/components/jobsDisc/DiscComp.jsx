@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function BackendDeveloperIntern({
+function DiscComp({
   title,
   company,
   location,
@@ -73,4 +73,4 @@ function BackendDeveloperIntern({
   );
 }
 
-export default BackendDeveloperIntern;
+export default DiscComp;

@@ -1,0 +1,63 @@
+[
+    {
+      "jobID": "001",
+      "title": "Backend Developer Intern",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Go", "Node.js", "JavaScript", "REST API integration", "Problem-solving"],
+      "perks": ["Flexible working hours", "Competitive compensation"],
+      "apply": "job-application@paymefin.tech"
+    },
+    {
+      "jobID": "002",
+      "title": "Animator",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Adobe Animate", "Toon Boom Harmony", "Autodesk Maya", "Animation principles"],
+      "perks": ["Collaborative work environment", "Creative freedom"],
+      "apply": "job-application@paymefin.tech"
+    },
+    {
+      "jobID": "003",
+      "title": "Automation Operative",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Python", "Bash", "Selenium", "CI/CD"],
+      "perks": ["Hands-on with cutting-edge tech", "Skill growth"],
+      "apply": "job-application@paymefin.tech"
+    },
+    {
+      "jobID": "004",
+      "title": "Deployment Operative",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Docker", "Jenkins", "AWS", "Node.js"],
+      "perks": ["Exciting blockchain projects", "Skill development"],
+      "apply": "job-application@paymefin.tech"
+    },
+    {
+      "jobID": "005",
+      "title": "Legal & Compliance Professional",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Corporate law", "Risk management", "Indian law"],
+      "perks": ["Professional growth", "Regulatory challenges"],
+      "apply": "job-application@paymefin.tech"
+    },
+    {
+      "jobID": "006",
+      "title": "Research & Development Specialist",
+      "company": "PayME Fintech Solutions",
+      "location": "Remote",
+      "about_us": "PayME Fintech is a leading blockchain company...",
+      "skills": ["Blockchain", "C++", "Solidity", "AWS"],
+      "perks": ["Innovative projects", "Career advancement"],
+      "apply": "job-application@paymefin.tech"
+    }
+  ]
+  
